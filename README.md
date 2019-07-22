@@ -1,5 +1,5 @@
-# Expand and collapse UITableViewCell with UIStackView
+# Expand and collapse `UITableViewCell`s with `UIStackView`
 
-There are a bunch of little gotcha's when creating expandable cells. Using UIStackView let's you leverage off of autolayout to have cell's with unique heights. Searching SO will show all of the pertinent settings but it is really easy to forget to set one e.g. `Content Compression Resistance Priority`. I've re-invented this wheel too many times and wanted to capture all of those details in a single project.
+This project demonstrates expanding and collapsing `UITableView` cells. There are many approaches to this but using a `UIStackView` is currently (Xcode 10, Swift 5) the one that best handles cells with unique heights and supports auto layout. There are so many details to get right that I collected them in this simple project, rather than  searching Stack Overflow each time I implement. Details like pinning the `UIStackView` to the cell’s `contentView` , setting `tableView.rowHeight = UITableView.automaticDimension`, setting variable line height `UILabel`s  `Content Compression Resistance Priority`, etc. are easy to overlook and may not manifest issues till runtime. 
 
 ![ExpandableCells](https://user-images.githubusercontent.com/2135673/61658444-3b285f80-ac7a-11e9-8a15-0699f9702f63.gif)
